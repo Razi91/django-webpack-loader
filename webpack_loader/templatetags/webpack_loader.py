@@ -34,3 +34,8 @@ def get_files(bundle_name, extension=None, config='DEFAULT'):
     :return: a list of matching chunks
     """
     return utils.get_files(bundle_name, extension=extension, config=config)
+
+
+@register.simple_tag
+def public_path():
+    return utils.get_public_path()

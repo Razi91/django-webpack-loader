@@ -70,3 +70,8 @@ def get_static(asset_name, config='DEFAULT'):
         ),
         asset_name
     )
+
+
+def get_public_path(extension=None, config='DEFAULT', attrs=''):
+    loader = get_loader(config)
+    return loader.get_assets().get('publicPath')
